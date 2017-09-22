@@ -18,7 +18,7 @@
 # <md>          :default => 'v12c',
 # <md>          :selectable => 'true',
 # <md>          :precedence_level => 'node',
-# <md>          :parm_type => 'pattern'
+# <md>          :parm_type => 'node'
 default['oracledb']['version'] = 'v12c'
 
 
@@ -31,7 +31,7 @@ default['oracledb']['version'] = 'v12c'
 # <md>          :default => 'en',
 # <md>          :selectable => 'true',
 # <md>          :precedence_level => 'node',
-# <md>          :parm_type => 'pattern'
+# <md>          :parm_type => 'node'
 default['oracledb']['language'] = 'en'
 
 
@@ -44,7 +44,7 @@ default['oracledb']['language'] = 'en'
 # <md>          :default => '1521',
 # <md>          :selectable => 'true',
 # <md>          :precedence_level => 'node',
-# <md>          :parm_type => 'pattern'
+# <md>          :parm_type => 'node'
 default['oracledb']['port'] = "1521"
 
 
@@ -57,20 +57,20 @@ default['oracledb']['port'] = "1521"
 # <md>          :default => 'orcl',
 # <md>          :selectable => 'true',
 # <md>          :precedence_level => 'node',
-# <md>          :parm_type => 'pattern'
+# <md>          :parm_type => 'node'
 default['oracledb']['SID'] = 'orcl'
 
 
 # <> Oracle Patchset number
 # <md>attribute 'oracledb/release_patchset',
-# <md>          :displayname => 'Oracle Patchset number',
+# <md>          :displayname => 'Oracle Patchset Number',
 # <md>          :description => 'Identifier of patch set to apply to Oracle for improvement and bug fix',
 # <md>          :type => 'string',
 # <md>          :required => 'recommended',
 # <md>          :default => '',
 # <md>          :selectable => 'true',
 # <md>          :precedence_level => 'node',
-# <md>          :parm_type => 'pattern'
+# <md>          :parm_type => 'node'
 default['oracledb']['release_patchset'] = '12.1.0.2.0' # 12.1.0.1.0 12.2.0.1.0 # ~ip_checker
 
 
@@ -83,7 +83,7 @@ default['oracledb']['release_patchset'] = '12.1.0.2.0' # 12.1.0.1.0 12.2.0.1.0 #
 # <md>          :default => 'oinstall',
 # <md>          :selectable => 'true',
 # <md>          :precedence_level => 'node',
-# <md>          :parm_type => 'pattern'
+# <md>          :parm_type => 'node'
 default['oracledb']['install_group'] = 'oinstall'
 
 
@@ -96,7 +96,7 @@ default['oracledb']['install_group'] = 'oinstall'
 # <md>          :default => '/u01',
 # <md>          :selectable => 'true',
 # <md>          :precedence_level => 'node',
-# <md>          :parm_type => 'pattern'
+# <md>          :parm_type => 'node'
 default['oracledb']['data_mount'] = '/u01'
 
 
@@ -108,7 +108,7 @@ default['oracledb']['data_mount'] = '/u01'
 # <md>          :required => 'recommended',
 # <md>          :default =>  '',
 # <md>          :precedence_level => 'node',
-# <md>          :parm_type => 'pattern',
+# <md>          :parm_type => 'node',
 # <md>          :secret => 'true'
 default['oracledb']['security']['sys_pw'] = ''
 
@@ -121,7 +121,7 @@ default['oracledb']['security']['sys_pw'] = ''
 # <md>          :required => 'recommended',
 # <md>          :default =>  '',
 # <md>          :precedence_level => 'node',
-# <md>          :parm_type => 'pattern',
+# <md>          :parm_type => 'node',
 # <md>          :secret => 'true'
 default['oracledb']['security']['system_pw'] = ''
 
@@ -139,7 +139,7 @@ default['oracledb']['security']['system_pw'] = ''
 # <md>          :default => '-1',
 # <md>          :selectable => 'true',
 # <md>          :precedence_level => 'node',
-# <md>          :parm_type => 'pattern'
+# <md>          :parm_type => 'node'
 default['oracledb']['swap_file_size_mb'] = '-1'
 
 ############################################################################################################
@@ -156,7 +156,7 @@ default['oracledb']['swap_file_size_mb'] = '-1'
 # <md>          :default => 'oracle',
 # <md>          :selectable => 'true',
 # <md>          :precedence_level => 'node',
-# <md>          :parm_type => 'none'
+# <md>          :parm_type => 'node'
 
 # <md>attribute 'oracledb/os_users/oracle/gid',
 # <md>          :displayname => 'Oracle OS User gid',
@@ -166,7 +166,7 @@ default['oracledb']['swap_file_size_mb'] = '-1'
 # <md>          :default => 'dba',
 # <md>          :selectable => 'true',
 # <md>          :precedence_level => 'node',
-# <md>          :parm_type => 'none'
+# <md>          :parm_type => 'node'
 
 # <md>attribute 'oracledb/os_users/oracle/comment',
 # <md>          :displayname => 'Oracle OS User comment',
@@ -176,7 +176,7 @@ default['oracledb']['swap_file_size_mb'] = '-1'
 # <md>          :default => 'Oracle administrative user',
 # <md>          :selectable => 'true',
 # <md>          :precedence_level => 'node',
-# <md>          :parm_type => 'none',
+# <md>          :parm_type => 'node',
 # <md>          :secret => 'false'
 
 # <md>attribute 'oracledb/os_users/oracle/home',
@@ -187,7 +187,7 @@ default['oracledb']['swap_file_size_mb'] = '-1'
 # <md>          :default => '/home/oracle',
 # <md>          :selectable => 'true',
 # <md>          :precedence_level => 'node',
-# <md>          :parm_type => 'none',
+# <md>          :parm_type => 'node',
 # <md>          :secret => 'false'
 
 # <md>attribute 'oracledb/os_users/oracle/shell',
@@ -198,7 +198,7 @@ default['oracledb']['swap_file_size_mb'] = '-1'
 # <md>          :default => '/bin/bash',
 # <md>          :selectable => 'true',
 # <md>          :precedence_level => 'node',
-# <md>          :parm_type => 'none',
+# <md>          :parm_type => 'node',
 # <md>          :secret => 'false'
 
 # <md>attribute 'oracledb/os_users/oracle/ldap_user',
@@ -207,9 +207,10 @@ default['oracledb']['swap_file_size_mb'] = '-1'
 # <md>          :type => 'string',
 # <md>          :required => 'recommended',
 # <md>          :default => 'false',
+# <md>          :choice => ['true', 'false'],
 # <md>          :selectable => 'true',
 # <md>          :precedence_level => 'node',
-# <md>          :parm_type => 'none',
+# <md>          :parm_type => 'node',
 # <md>          :secret => 'false'
 
 default['oracledb']['os_users'] = {

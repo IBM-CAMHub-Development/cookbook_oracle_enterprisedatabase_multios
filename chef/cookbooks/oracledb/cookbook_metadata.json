@@ -1,5 +1,5 @@
 {
-    "oracle": {
+    "oracledb": {
         "software": {
             "name": "Oracle Enterprise Database",
             "major_version": [

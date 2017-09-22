@@ -44,7 +44,7 @@ force_default['oracledb']['SID'] = node['oracledb']['SID'].upcase
 # <md>          :required => 'required',
 # <md>          :default => [ 'oinstall', 'dba', 'oper', 'asmdba', 'asmoper', 'asmadmin', 'racdba' ],
 # <md>          :precedence_level => 'node',
-# <md>          :parm_type => 'pattern',
+# <md>          :parm_type => 'node'
 default['oracledb']['groups'] = %w(dba oper asmdba asmoper asmadmin racdba)
 # TODO Need to check if all the groups are really needed espicially oper asmdba asmoper asmadmin racdba
 # ^^ Source for above groups -- https://docs.oracle.com/database/121/LADBI/usr_grps.htm#LADBI7676
@@ -322,7 +322,7 @@ default['ibm']['sw_repo_self_signed_cert'] = "false"
 # <md>          :selectable => 'true',
 # <md>          :choice => [ 'v12c' ]
 # <md>          :precedence_level => 'node',
-# <md>          :parm_type => 'pattern',
+# <md>          :parm_type => 'node'
 default['oracledb']['asm']['ASM_install'] = 'false'
 
 # <> ASM INstallation log directory
@@ -335,7 +335,7 @@ default['oracledb']['asm']['ASM_install'] = 'false'
 # <md>          :selectable => 'true',
 # <md>          :choice => [ 'v12c' ]
 # <md>          :precedence_level => 'node',
-# <md>          :parm_type => 'pattern',
+# <md>          :parm_type => 'node'
 default['oracledb']['asm']['log'] = "#{node['ibm']['temp_dir']}/asm.log"
 
 # <> ASM Instance name
@@ -348,7 +348,7 @@ default['oracledb']['asm']['log'] = "#{node['ibm']['temp_dir']}/asm.log"
 # <md>          :selectable => 'true',
 # <md>          :choice => [ 'v12c' ]
 # <md>          :precedence_level => 'node',
-# <md>          :parm_type => 'pattern',
+# <md>          :parm_type => 'node'
 default['oracledb']['asm']['SID'] = '+ASM1'
 
 # <> Location of the ASM disks
@@ -361,7 +361,7 @@ default['oracledb']['asm']['SID'] = '+ASM1'
 # <md>          :selectable => 'true',
 # <md>          :choice => [ 'v12c' ]
 # <md>          :precedence_level => 'node',
-# <md>          :parm_type => 'pattern',
+# <md>          :parm_type => 'node'
 default['oracledb']['asm']['basedir'] = '/dev/oracleasm/disks'
 
 # <> Oracle ASM redundancy value set
@@ -374,7 +374,7 @@ default['oracledb']['asm']['basedir'] = '/dev/oracleasm/disks'
 # <md>          :selectable => 'true',
 # <md>          :choice => [ 'v12c' ]
 # <md>          :precedence_level => 'node',
-# <md>          :parm_type => 'pattern',
+# <md>          :parm_type => 'node'
 default['oracledb']['asm']['asm_redundancy'] = 'EXTERNAL'
 
 # <> DiskVolume name for volume FRA
@@ -387,7 +387,7 @@ default['oracledb']['asm']['asm_redundancy'] = 'EXTERNAL'
 # <md>          :selectable => 'true',
 # <md>          :choice => [ 'v12c' ]
 # <md>          :precedence_level => 'node',
-# <md>          :parm_type => 'pattern',
+# <md>          :parm_type => 'node'
 default['oracledb']['asm']['DiskVolName_FRA'] = 'DG' + node['oracledb']['SID'] + '_FRA'
 
 # <> DiskVolume name for volume DATA
@@ -400,7 +400,7 @@ default['oracledb']['asm']['DiskVolName_FRA'] = 'DG' + node['oracledb']['SID'] +
 # <md>          :selectable => 'true',
 # <md>          :choice => [ 'v12c' ]
 # <md>          :precedence_level => 'node',
-# <md>          :parm_type => 'pattern',
+# <md>          :parm_type => 'node'
 default['oracledb']['asm']['DiskVolName_DATA'] = 'DG' + node['oracledb']['SID'] + '_DATA'
 
 # <> ASM check on / off used in rsp for setting the instalation type
@@ -413,7 +413,7 @@ default['oracledb']['asm']['DiskVolName_DATA'] = 'DG' + node['oracledb']['SID'] 
 # <md>          :selectable => 'true',
 # <md>          :choice => [ 'v12c' ]
 # <md>          :precedence_level => 'node',
-# <md>          :parm_type => 'pattern',
+# <md>          :parm_type => 'node'
 default['oracledb']['database']['ora_storage_type'] = 'ASM_STORAGE'
 default['oracledb']['database']['ora_storage_typedb'] = 'ASM'
 
@@ -427,7 +427,7 @@ default['oracledb']['database']['ora_storage_typedb'] = 'ASM'
 # <md>          :selectable => 'true',
 # <md>          :choice => [ 'v12c' ]
 # <md>          :precedence_level => 'node',
-# <md>          :parm_type => 'pattern',
+# <md>          :parm_type => 'node'
 default['oracledb']['asm']['asmsnmpPassword'] = ''
 
 # <> Oracle ASM system password
@@ -440,7 +440,7 @@ default['oracledb']['asm']['asmsnmpPassword'] = ''
 # <md>          :selectable => 'true',
 # <md>          :choice => [ 'v12c' ]
 # <md>          :precedence_level => 'node',
-# <md>          :parm_type => 'pattern',
+# <md>          :parm_type => 'node'
 default['oracledb']['asm']['sysAsmPassword'] = ''
 # ASM Storage Disks
 
@@ -454,7 +454,7 @@ default['oracledb']['asm']['sysAsmPassword'] = ''
 # <md>          :selectable => 'true',
 # <md>          :choice => [ 'v12c' ]
 # <md>          :precedence_level => 'node',
-# <md>          :parm_type => 'pattern',
+# <md>          :parm_type => 'node'
 default['oracledb']['asm']['crs_diskpartitions']  = { "CRSDISK1"  => "/dev/vdb1" } # '/dev/sdc1/part1'
 default['oracledb']['asm']['fra_diskpartitions']  = { "FRADISK1"  => "/dev/vdc1" } # '/dev/sdd1/part1'
 default['oracledb']['asm']['data_diskpartitions'] = { "DATADISK1" => "/dev/vdd1" } # '/dev/sde1/part1'

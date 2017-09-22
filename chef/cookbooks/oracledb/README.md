@@ -96,7 +96,7 @@ Attributes
   <tr>
     <td><code>node['oracledb']['swap_file_size_mb']</code></td>
     <td>Swap size in MB</td>
-    <td><code>true</code></td>
+    <td><code>-1</code></td>
   </tr>
   <tr>
     <td><code>node['oracledb']['version']</code></td>
