@@ -4,7 +4,7 @@ maintainer_email ''
 license          'Copyright IBM Corp. 2017, 2017'
 description      'Oracle Enterprise Edition DB'
 long_description IO.read(File.join(File.dirname(__FILE__), 'README.md'))
-version '0.1.30'
+version '1.0.0'
 depends 'ibm_cloud_utils'
 supports	'RHEL', '>= 6.5'
 supports	'RHEL', '>= 7.0'
