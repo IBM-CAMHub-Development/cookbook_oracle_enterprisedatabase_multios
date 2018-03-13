@@ -1,7 +1,7 @@
 # Cookbook Name:: oracledb
 # Recipe:: attributes/internal
 #
-# Copyright IBM Corp. 2017, 2017
+# Copyright IBM Corp. 2017, 2018
 #
 
 
@@ -17,6 +17,7 @@
 # <md>          :required => 'recommended',
 # <md>          :default => 'v12c',
 # <md>          :selectable => 'true',
+# <md>          :immutable_after_create => 'true',
 # <md>          :precedence_level => 'node',
 # <md>          :parm_type => 'node'
 default['oracledb']['version'] = 'v12c'
@@ -30,6 +31,7 @@ default['oracledb']['version'] = 'v12c'
 # <md>          :required => 'recommended',
 # <md>          :default => 'en',
 # <md>          :selectable => 'true',
+# <md>          :immutable_after_create => 'true',
 # <md>          :precedence_level => 'node',
 # <md>          :parm_type => 'node'
 default['oracledb']['language'] = 'en'
@@ -43,6 +45,7 @@ default['oracledb']['language'] = 'en'
 # <md>          :required => 'recommended',
 # <md>          :default => '1521',
 # <md>          :selectable => 'true',
+# <md>          :immutable_after_create => 'true',
 # <md>          :precedence_level => 'node',
 # <md>          :parm_type => 'node'
 default['oracledb']['port'] = "1521"
@@ -56,6 +59,7 @@ default['oracledb']['port'] = "1521"
 # <md>          :required => 'recommended',
 # <md>          :default => 'orcl',
 # <md>          :selectable => 'true',
+# <md>          :immutable_after_create => 'true',
 # <md>          :precedence_level => 'node',
 # <md>          :parm_type => 'node'
 default['oracledb']['SID'] = 'orcl'
@@ -69,6 +73,7 @@ default['oracledb']['SID'] = 'orcl'
 # <md>          :required => 'recommended',
 # <md>          :default => '',
 # <md>          :selectable => 'true',
+# <md>          :immutable_after_create => 'true',
 # <md>          :precedence_level => 'node',
 # <md>          :parm_type => 'node'
 default['oracledb']['release_patchset'] = '12.1.0.2.0' # 12.1.0.1.0 12.2.0.1.0 # ~ip_checker
@@ -82,6 +87,7 @@ default['oracledb']['release_patchset'] = '12.1.0.2.0' # 12.1.0.1.0 12.2.0.1.0 #
 # <md>          :required => 'recommended',
 # <md>          :default => 'oinstall',
 # <md>          :selectable => 'true',
+# <md>          :immutable_after_create => 'true',
 # <md>          :precedence_level => 'node',
 # <md>          :parm_type => 'node'
 default['oracledb']['install_group'] = 'oinstall'
@@ -95,6 +101,7 @@ default['oracledb']['install_group'] = 'oinstall'
 # <md>          :required => 'recommended',
 # <md>          :default => '/u01',
 # <md>          :selectable => 'true',
+# <md>          :immutable_after_create => 'true',
 # <md>          :precedence_level => 'node',
 # <md>          :parm_type => 'node'
 default['oracledb']['data_mount'] = '/u01'
@@ -138,6 +145,7 @@ default['oracledb']['security']['system_pw'] = ''
 # <md>          :required => 'recommended',
 # <md>          :default => '-1',
 # <md>          :selectable => 'true',
+# <md>          :immutable_after_create => 'true',
 # <md>          :precedence_level => 'node',
 # <md>          :parm_type => 'node'
 default['oracledb']['swap_file_size_mb'] = '-1'
@@ -155,6 +163,7 @@ default['oracledb']['swap_file_size_mb'] = '-1'
 # <md>          :required => 'recommended',
 # <md>          :default => 'oracle',
 # <md>          :selectable => 'true',
+# <md>          :immutable_after_create => 'true',
 # <md>          :precedence_level => 'node',
 # <md>          :parm_type => 'node'
 
@@ -165,6 +174,7 @@ default['oracledb']['swap_file_size_mb'] = '-1'
 # <md>          :required => 'recommended',
 # <md>          :default => 'dba',
 # <md>          :selectable => 'true',
+# <md>          :immutable_after_create => 'true',
 # <md>          :precedence_level => 'node',
 # <md>          :parm_type => 'node'
 
@@ -175,6 +185,7 @@ default['oracledb']['swap_file_size_mb'] = '-1'
 # <md>          :required => 'recommended',
 # <md>          :default => 'Oracle administrative user',
 # <md>          :selectable => 'true',
+# <md>          :immutable_after_create => 'true',
 # <md>          :precedence_level => 'node',
 # <md>          :parm_type => 'node',
 # <md>          :secret => 'false'
@@ -186,6 +197,7 @@ default['oracledb']['swap_file_size_mb'] = '-1'
 # <md>          :required => 'recommended',
 # <md>          :default => '/home/oracle',
 # <md>          :selectable => 'true',
+# <md>          :immutable_after_create => 'true',
 # <md>          :precedence_level => 'node',
 # <md>          :parm_type => 'node',
 # <md>          :secret => 'false'
@@ -197,6 +209,7 @@ default['oracledb']['swap_file_size_mb'] = '-1'
 # <md>          :required => 'recommended',
 # <md>          :default => '/bin/bash',
 # <md>          :selectable => 'true',
+# <md>          :immutable_after_create => 'true',
 # <md>          :precedence_level => 'node',
 # <md>          :parm_type => 'node',
 # <md>          :secret => 'false'
@@ -209,6 +222,7 @@ default['oracledb']['swap_file_size_mb'] = '-1'
 # <md>          :default => 'false',
 # <md>          :choice => ['true', 'false'],
 # <md>          :selectable => 'true',
+# <md>          :immutable_after_create => 'true',
 # <md>          :precedence_level => 'node',
 # <md>          :parm_type => 'node',
 # <md>          :secret => 'false'
