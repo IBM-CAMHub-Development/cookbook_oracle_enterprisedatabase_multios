@@ -2,12 +2,15 @@ name             'oracledb'
 maintainer       'IBM Corp'
 maintainer_email ''
 license          'Copyright IBM Corp. 2017, 2018'
+issues_url   'https://github.com/IBM-CAMHub-Open/cookbook_oracle_enterprisedatabase_multios/issues'
+source_url   'https://github.com/IBM-CAMHub-Open/cookbook_oracle_enterprisedatabase_multios'
+chef_version '>= 12.5' if respond_to?(:chef_version)
 description      'Oracle Enterprise Edition DB'
 long_description IO.read(File.join(File.dirname(__FILE__), 'README.md'))
-version '1.0.2'
+version '2.0.0'
 depends 'ibm_cloud_utils'
-supports	'RHEL', '>= 6.5'
-supports	'RHEL', '>= 7.0'
+supports	'redhat', '>= 6.5'
+supports	'redhat', '>= 7.0'
 
 attribute 'oracledb/SID',
           :default => 'orcl',

@@ -8,7 +8,7 @@ Requirements
 
 ### Platform:
 
-* Rhel (>= 7.0)
+* Redhat (>= 7.0)
 
 ### Cookbooks:
 

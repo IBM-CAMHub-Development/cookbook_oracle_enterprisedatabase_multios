@@ -234,6 +234,4 @@ default['oracledb']['os_users'] = {
     'comment' => 'Oracle Database User Administrator',
     'home' => '/home/oracle',
     'shell' => '/bin/bash',
-    'ldap_user' => 'false'
-  }
-}
+    'ldap_user' => 'false' } }

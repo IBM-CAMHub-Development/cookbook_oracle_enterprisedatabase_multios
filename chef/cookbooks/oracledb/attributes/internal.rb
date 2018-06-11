@@ -3,7 +3,7 @@
 # Cookbook Name:: oracledb
 # attributes :: internal
 #
-# Copyright IBM Corp. 2017, 2017
+# Copyright IBM Corp. 2017, 2018
 #
 ########################################################
 
@@ -64,35 +64,25 @@ when 'rhel'
     case node['oracledb']['release_patchset']
     when '12.2.0.1.0' # ~ip_checker
       default['oracledb']['database']['archive_names'] = {
-        '1' => { 'filename' => 'V839960-01.zip', 'sha256' => '12598250BE536C9D074AE0EB2F7DF4A9B463D0EB' }
-      }
+        '1' => { 'filename' => 'V839960-01.zip', 'sha256' => '12598250BE536C9D074AE0EB2F7DF4A9B463D0EB' } }
       default['oracledb']['grid']['archive_names'] = {
-        '1' => { 'filename' => 'V840012-01.zip', 'sha256' => 'F4611B73B502A2BD560E5788BE168E306D7A4BDA' }
-      }
+        '1' => { 'filename' => 'V840012-01.zip', 'sha256' => 'F4611B73B502A2BD560E5788BE168E306D7A4BDA' } }
     when '12.1.0.2.0' # ~ip_checker
       default['oracledb']['database']['archive_names'] = {
         '1' => { 'filename' => 'V46095-01_1of2.zip', 'sha256' => 'E378379735301E2B87A812803B59475B9DA8F36C' },
-        '2' => { 'filename' => 'V46095-01_2of2.zip', 'sha256' => 'FEFC5B984E139ED08DD0C54105BAE2CA297AA26C' }
-      }
+        '2' => { 'filename' => 'V46095-01_2of2.zip', 'sha256' => 'FEFC5B984E139ED08DD0C54105BAE2CA297AA26C' } }
       default['oracledb']['grid']['archive_names'] = {
         '1' => { 'filename' => 'V46096-01_1of2.zip', 'sha256' => '32C045F3E673147A7ACE78222DF8A26C900AB8E6' },
-        '2' => { 'filename' => 'V46096-01_2of2.zip', 'sha256' => 'D74DB40E7187E426E47CC5512DAE1855E44027CD' }
-      }
+        '2' => { 'filename' => 'V46096-01_2of2.zip', 'sha256' => 'D74DB40E7187E426E47CC5512DAE1855E44027CD' } }
     when '12.1.0.1.0' # ~ip_checker
       default['oracledb']['database']['archive_names'] = {
         '1' => { 'filename' => 'V38500-01_1of2.zip', 'sha256' => '1821357C86705ADA97E30A7A1700B73E9CAE81A0' },
-        '2' => { 'filename' => 'V38500-01_2of2.zip', 'sha256' => '16098684F9C395890C49D1F17660AD453D7825A0' }
-      }
+        '2' => { 'filename' => 'V38500-01_2of2.zip', 'sha256' => '16098684F9C395890C49D1F17660AD453D7825A0' } }
       default['oracledb']['grid']['archive_names'] = {
         '1' => { 'filename' => 'V38501-01_1of2.zip', 'sha256' => 'A780EB69F1507D4CD6C3D3D0A8309BE4559781D7' },
-        '2' => { 'filename' => 'V38501-01_2of2.zip', 'sha256' => '515BFDAC059B4325C23B9EED0126FA947BE7E52F' }
-      }
+        '2' => { 'filename' => 'V38501-01_2of2.zip', 'sha256' => '515BFDAC059B4325C23B9EED0126FA947BE7E52F' } }
     end
-  when 'v11g'
-  when 'v10g'
-  when 'v9i'
   end
-when 'windows'
 end
 
 # <> Oracle database and maint directories (based on ibm repo location)

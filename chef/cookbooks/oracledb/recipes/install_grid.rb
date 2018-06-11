@@ -3,7 +3,7 @@
 # Cookbook Name:: oracledb
 # Recipe:: install
 #
-# Copyright IBM Corp. 2016, 2017
+# Copyright IBM Corp. 2016, 2018
 #
 # <> Installation recipe (install_grid.rb)
 # <> This recipe performs the Grid product installation.
@@ -43,17 +43,16 @@ unless Dir.exist? node['oracledb']['oracle_home']
   end
 end
 
-=begin
 # Create responce directory
 
-directory "#{node['oracledb']['expand_area'].gsub('--cookbook_name--', cookbook_name)}/oracle-setup-grid/grid/response" do
-  owner node['oracledb']['os_users']['oracle']['name']
-  group node['oracledb']['install_group']
-  recursive true
-  mode '0750'
-  action :create
-end
-=end
+# directory "#{node['oracledb']['expand_area'].gsub('--cookbook_name--', cookbook_name)}/oracle-setup-grid/grid/response" do
+#   owner node['oracledb']['os_users']['oracle']['name']
+#   group node['oracledb']['install_group']
+#   recursive true
+#   mode '0750'
+#   action :create
+# end
+
 
 # PREPARATION OF GRID RESPONSE FILE
 
