@@ -3,20 +3,13 @@
 # Cookbook Name:: oracledb
 # Recipe:: prereq
 #
-# Copyright IBM Corp. 2016, 2017
+# Copyright IBM Corp. 2016, 2018
 #
 ########################################################
 #
 # <> Installation recipe (prereq.rb)
 # <> This recipe configures the operating prerequisites for the product.
 
-# This will only work if the VM has access to rubygems.org
-# Otherwise the gem should be installed during bootstrap
-chef_gem 'chef-vault' do
-  action :install
-  version '2.9.0'
-  compile_time true
-end
 
 ################################################################################
 # PACKAGES INSTALLATION
