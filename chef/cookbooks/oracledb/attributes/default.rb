@@ -76,7 +76,7 @@ default['oracledb']['SID'] = 'orcl'
 # <md>          :immutable_after_create => 'true',
 # <md>          :precedence_level => 'node',
 # <md>          :parm_type => 'node'
-default['oracledb']['release_patchset'] = '12.1.0.2.0' # 12.1.0.1.0 12.2.0.1.0 # ~ip_checker
+default['oracledb']['release_patchset'] = '12.2.0.1.0' # 12.1.0.1.0 12.1.0.2.0 # ~ip_checker
 
 
 # <> Oracle Install Group
